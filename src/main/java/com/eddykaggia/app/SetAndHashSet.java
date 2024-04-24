@@ -1,6 +1,7 @@
 package com.eddykaggia.app;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
 public class SetAndHashSet {
@@ -35,6 +36,20 @@ public class SetAndHashSet {
         names.add("Buttercup");
         names.add("Blossom");
 
+        // Could use an enhanced for loop
+        for (String name: names) {
+            System.out.println(name);
+        }
+        System.out.println();
 
+        // Could use a lambda
+        names.forEach(System.out::println);
+        System.out.println();
+
+        // Could use an iterator object
+        Iterator<String> namesIterator = names.iterator();
+        while (namesIterator.hasNext()) {
+            System.out.println(namesIterator.next());
+        }
     }
 }
